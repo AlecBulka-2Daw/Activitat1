@@ -7,7 +7,9 @@ include 'partials/header.tpl.php';
     </header>
     <?php include 'partials/nav.tpl.php'; ?>
     <main>
-        Home 
+        <h2>
+        Welcome <?= $user; ?> 
+        </h2>
     </main>
 </body>
 </html>

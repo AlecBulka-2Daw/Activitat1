@@ -1,5 +1,5 @@
 <?php
-
+    ini_set('display_errors', 'on');
     session_start();
     define('APP', __DIR__);
     require 'config.php';
