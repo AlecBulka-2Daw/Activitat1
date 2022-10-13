@@ -7,8 +7,8 @@ include 'partials/nav.tpl.php';
         <input type="password" name="password" id="password" placeholder = "password">
         <button type="submit">Login</button>
     </form>
-    <?php if(isset($_SESSION['register'])): ?>
-        <p><?= $_SESSION['register'] ?></p>
+    <?php if(isset($_SESSION['error'])): ?>
+        <p><?= $_SESSION['error'] ?></p>
     <?php endif; ?>
 </body>
 </html>
