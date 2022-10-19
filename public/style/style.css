@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    margin-top: 80px;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+nav {
+    font-size: 20px;
+    margin: 20px;
+}
+
+nav a {
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+form {
+    font-weight: bolder;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    width: 600px;
+    height: 520px;
+    border: 2px solid black;
+}
+
+#username {
+    margin-top: 70px;
+    width: 400px;
+    height: 42px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#email {
+    margin-top: 70px;
+    width: 400px;
+    height: 42px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#password {
+    margin-top: 70px;
+    width: 400px;
+    height: 42px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#save-user {
+    background-color: red;
+    width: 20px;
+    margin-top: 50px;
+    background-color: white;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+}
+
+button {
+    border: 2px solid black;
+    margin-top: 20px;
+    padding: 15px;
+    width: 120px;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}

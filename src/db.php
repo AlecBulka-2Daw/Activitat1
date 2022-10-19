@@ -47,9 +47,15 @@ function register(PDO $db, string $email, string $password, string $username):bo
 
     $stmt=$db->prepare("INSERT INTO users (email, password, username) VALUES (:email, :password, :username)");
     $options = [
-        'cost' => 4,
+        'cost' => 4
     ];
     $res = $stmt->execute([":email"=>$email,":password"=>password_hash($password, PASSWORD_BCRYPT, $options),":username"=>$username]);
+
+    $stmt=$db->prepare("SELECT * FROM users WHERE email=:email LIMIT 1");
+    $res = $stmt->execute([":email"=>$email]);
+    $user = $stmt->fetchAll()[0];
+    $_SESSION['user'] = $user;
+
 
     return true;
 }
