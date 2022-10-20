@@ -10,6 +10,7 @@ include 'partials/nav.tpl.php';
         <button>
             <a href="?url=logout">Logout</a>
         </button>
+        <p>Last online: <?= $_COOKIE['lastOnline'] ?></p>
     <?php else: ?>
 
 

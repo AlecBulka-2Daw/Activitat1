@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     display: flex;
     margin-top: 80px;
@@ -12,15 +11,15 @@ body {
     align-items: center;
 }
 
-h1{
+h1 {
     text-align: center;
 }
 
-h2{
+h2 {
     text-align: center;
 }
 
-h3{
+h3 {
     text-align: center;
 }
 

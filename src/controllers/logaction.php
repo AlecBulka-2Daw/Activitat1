@@ -9,6 +9,7 @@ if (isset($_COOKIE['user'])) {
     $stmt=$db->prepare("SELECT * FROM users WHERE email=:email");
     $stmt->execute([":email"=>$user[0]]);
     $_SESSION['user'] = $stmt->fetchAll()[0];
+    setcookie("lastOnline", date('d-m-Y H:i'), time()+60*60*24*365, "/");
     header('Location:?url=dashboard');
 }
 
@@ -24,6 +25,7 @@ if (!empty($_POST["email"]) && !empty($_POST["password"])) {
             if (isset($_POST["save-user"])){
                 if ((filter_input(INPUT_POST, 'save-user') == 1)) {
                     setcookie("user", $_SESSION['user']->email . ";" . $_SESSION['user']->password . ";" . $_SESSION['user']->username, time()+60*60*24*365, "/");
+                    setcookie("lastOnline", date('d-m-Y H:i'), time()+60*60*24*365, "/");
                 }
             }
             header('Location:?url=dashboard');

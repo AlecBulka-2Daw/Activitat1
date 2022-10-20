@@ -24,7 +24,7 @@ function connectMysql(string $dsn,string $dbuser,string $dbpass):PDO{
 function auth(PDO $db, string $email, string $password):bool{
 
     $stmt=$db->prepare("SELECT * FROM users WHERE email=:email LIMIT 1");
-    $res = $stmt->execute([":email"=>$email]);
+    $stmt->execute([":email"=>$email]);
 
     if ($stmt->rowCount()==1){
         $user = $stmt->fetchAll()[0];
@@ -39,7 +39,7 @@ function auth(PDO $db, string $email, string $password):bool{
 function register(PDO $db, string $email, string $password, string $username):bool{
 
     $stmt=$db->prepare("SELECT * FROM users WHERE email=:email OR username=:username");
-    $res = $stmt->execute([":email"=>$email, ":username"=>$username]);
+    $stmt->execute([":email"=>$email, ":username"=>$username]);
 
     if ($stmt->rowCount()!=0){
         return false;
@@ -49,10 +49,10 @@ function register(PDO $db, string $email, string $password, string $username):bo
     $options = [
         'cost' => 4
     ];
-    $res = $stmt->execute([":email"=>$email,":password"=>password_hash($password, PASSWORD_BCRYPT, $options),":username"=>$username]);
+    $stmt->execute([":email"=>$email,":password"=>password_hash($password, PASSWORD_BCRYPT, $options),":username"=>$username]);
 
     $stmt=$db->prepare("SELECT * FROM users WHERE email=:email LIMIT 1");
-    $res = $stmt->execute([":email"=>$email]);
+    $stmt->execute([":email"=>$email]);
     $user = $stmt->fetchAll()[0];
     $_SESSION['user'] = $user;
 
