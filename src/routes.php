@@ -8,5 +8,7 @@ $routes = [
     'register',
     'registeraction',
     'dashboard',
+    'profile',
+    'settings',
     'error'
 ];

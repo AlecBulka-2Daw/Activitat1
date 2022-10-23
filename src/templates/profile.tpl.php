@@ -15,14 +15,8 @@ include 'partials/header.tpl.php';
             <a href="?url=settings">Settings</a>
         </div>
     </main>
+
+    <h1><?= $user->username; ?> </h1>
     
 </body>
 </html>
-
-
-
-
-
-
-
-

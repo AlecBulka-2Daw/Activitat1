@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/style/style.css">
-    <title>App</title>
+    <title>DAW School</title>
 </head>
 <body <?php if (isset($_SESSION["user"])){
                 if (isset($_COOKIE[$_SESSION["user"]->id . "color"])){

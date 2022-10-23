@@ -4,12 +4,8 @@ include 'partials/nav.tpl.php';
 ?>
     <?php if (isset($_COOKIE['user'])):?>
         <?php $user = explode(";", $_COOKIE['user'])?>
-        <button>
-            <a href="?url=logaction">Continue as <?=$user[2]; ?> </a>
-        </button>
-        <button>
-            <a href="?url=logout">Logout</a>
-        </button>
+            <a href="?url=logaction"><button>Continue as <?=$user[2]; ?></button></a>
+            <a href="?url=logout"><button>Logout</button></a>
         <p>Last online: <?= $_COOKIE['lastOnline'] ?></p>
     <?php else: ?>
 

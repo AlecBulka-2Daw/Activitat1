@@ -2,6 +2,6 @@
 
 require 'src/render.php';
 
-$title = "School";
+$title = "DAW School";
 
 echo render('home', ['title' => $title]);
