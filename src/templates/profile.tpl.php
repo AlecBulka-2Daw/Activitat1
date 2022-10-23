@@ -16,7 +16,8 @@ include 'partials/header.tpl.php';
         </div>
     </main>
 
-    <h1><?= $user->username; ?> </h1>
+    <h2>Username: <?= $user->username; ?> </h2>
+    <h2>Email: <?= $user->email; ?> </h2>
     
 </body>
 </html>
