@@ -8,20 +8,27 @@ include 'partials/header.tpl.php';
     <?php include 'partials/nav.tpl.php'; ?>
     <main>
         <h2>
-        Welcome <?= $user->username; ?> 
+        <?= $welcome; ?> <?= $user->username; ?> 
         </h2>
         <div>
-            <a href="?url=profile">Profile</a>
-            <a href="?url=settings">Settings</a>
+            <a href="?url=profile"><?= $profile; ?></a>
+            <a href="?url=settings"><?= $settings; ?></a>
         </div>
     </main>
 
     <form action="?url=settings" method="POST"><br>
-        Seleccione de que color desea que sea la página de ahora en más:<br><br>
-        <input type="radio" value="rojo" name="radio">Rojo<br>
-        <input type="radio" value="verde" name="radio">Verde<br>
-        <input type="radio" value="azul" name="radio">Azul<br><br>
-        <input type="submit" value="Confirmar Color">
+    <?= $selectC; ?><br><br>
+        <input type="radio" value="red" name="color"><?= $colors[0]; ?><br>
+        <input type="radio" value="green" name="color"><?= $colors[1]; ?><br>
+        <input type="radio" value="blue" name="color"><?= $colors[2]; ?><br><br>
+        <input id="submit" type="submit" value="<?= $btnC; ?>">
+    </form>
+
+    <form action="?url=settings" method="POST"><br>
+    <?= $selectL; ?><br><br>
+         <input type="radio" value="en" name="lang"><?= $langs[0]; ?><br>
+         <input type="radio" value="es" name="lang"><?= $langs[1]; ?><br><br>
+         <input id="submit" type="submit" value="<?= $btnL; ?>">
     </form>
     
 </body>

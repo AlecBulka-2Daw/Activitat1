@@ -14,5 +14,16 @@
                         echo "style=\"background:$color[1]\"";
                     }
                 }
+
             }
     ?>>
+    <?php if (isset($_SESSION["user"])){
+                if (isset($_COOKIE[$_SESSION["user"]->id . "lang"])){
+                    $lang = explode(";", $_COOKIE[$_SESSION["user"]->id . "lang"]);
+                    if ((int)$lang[0] == $_SESSION["user"]->id) {
+                        $_SESSION["lang"] = "src/locale/". $lang[1] . ".lang.php";
+                    }
+                }
+                
+            }
+    ?>

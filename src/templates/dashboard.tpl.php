@@ -8,11 +8,11 @@ include 'partials/header.tpl.php';
     <?php include 'partials/nav.tpl.php'; ?>
     <main>
         <h2>
-        Welcome <?= $user->username; ?> 
+        <?= $welcome; ?> <?= $user->username; ?> 
         </h2>
         <div>
-            <a href="?url=profile">Profile</a>
-            <a href="?url=settings">Settings</a>
+            <a href="?url=profile"><?= $profile; ?></a>
+            <a href="?url=settings"><?= $settings; ?></a>
         </div>
     </main>
     
